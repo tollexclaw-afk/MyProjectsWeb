@@ -1,12 +1,12 @@
 :root {
-  --bg: #090d16;
-  --surface: #111827;
-  --surface-alt: #161f2e;
-  --text: #f8fafc;
-  --muted: #a0aec0;
-  --accent: #38bdf8;
-  --accent-strong: #0ea5e9;
-  --border: rgba(148, 163, 184, 0.18);
+  --bg: #ffeb3b; /* Bright yellow background */
+  --surface: #ffffff;
+  --surface-alt: #f0f8ff; /* Light blue */
+  --text: #333333;
+  --muted: #666666;
+  --accent: #ff4081; /* Bright pink */
+  --accent-strong: #e91e63; /* Deeper pink */
+  --border: rgba(255, 64, 129, 0.2);
 }
 
 * {
@@ -22,8 +22,8 @@ body {
 body {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 28%),
-    linear-gradient(180deg, #0b1220 0%, #090d16 60%, #0d1323 100%);
+  background: linear-gradient(135deg, #ffeb3b 0%, #ff9800 25%, #e91e63 50%, #9c27b0 75%, #3f51b5 100%);
+  background-attachment: fixed;
   line-height: 1.6;
 }
 
@@ -42,8 +42,8 @@ img {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(16px);
-  background: rgba(9, 13, 22, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(255, 64, 129, 0.2);
 }
 
 .header-inner,
@@ -66,6 +66,11 @@ img {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-decoration: none;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
 }
 
 .site-nav {
@@ -159,9 +164,9 @@ h3 {
 }
 
 .button-secondary {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.9);
   color: var(--text);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--accent);
 }
 
 .section {
@@ -180,11 +185,18 @@ h3 {
 
 .card,
 .info-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--accent);
   border-radius: 24px;
   padding: 1.75rem;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 40px rgba(255, 64, 129, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(255, 64, 129, 0.3);
 }
 
 .card h3 {
@@ -213,14 +225,14 @@ h3 {
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 2rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--accent);
   border-radius: 28px;
   padding: 2rem;
 }
 
 .site-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--border);
   padding: 1.5rem 0;
 }
 
