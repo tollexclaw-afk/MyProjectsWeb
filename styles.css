@@ -42,7 +42,7 @@ img {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(16px);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   border-bottom: 1px solid rgba(255, 64, 129, 0.2);
 }
 
@@ -81,14 +81,15 @@ img {
 }
 
 .site-nav a {
-  color: var(--muted);
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.2s ease;
+  font-size: 2rem;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  color: var(--text);
+  color: #f0f0f0;
 }
 
 .hero {
